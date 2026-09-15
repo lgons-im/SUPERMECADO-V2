@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMercado - Catálogo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <h1>Mega<span>Mercado</span></h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html" class="active">Catálogo</a>
+      <a href="pedido.html">Delivery</a>
+      <a href="contacto.html">Sedes</a>
+    </nav>
+  </header>
+
+  <section class="seccion">
+    <h2>Catálogo Completo</h2>
+
+    <div class="filtro-categoria">
+      <label>Categoría: </label>
+      <select id="select-categoria" onchange="filtrarProductos()">
+        <option value="todos">Todas</option>
+        
+        <option value="abarrotes">Abarrotes</option>
+        <option value="frutas">Frutas</option>
+        <option value="limpieza">Limpieza</option>
+      </select>
+      <button onclick="filtrarSoloOfertas()">Ver Solo Ofertas</button>
+    </div>
+
+    <div id="grid-catalogo" class="grid-cards fade-in-scroll">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 MegaMercado Perú</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

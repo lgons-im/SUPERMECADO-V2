@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaMercado - Solicitar Delivery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <h1>Mega<span>Mercado</span></h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="pedido.html" class="active">Delivery</a>
+      <a href="contacto.html">Sedes</a>
+    </nav>
+  </header>
+
+  <section class="seccion">
+    <h2>Solicitar Delivery</h2>
+
+    <form class="form-delivery" onsubmit="guardarPedido(event)">
+      <div class="form-group">
+        <label>Dirección de Entrega:</label>
+        <input type="text" id="direccion" placeholder="Ej. Av. Ferrocarril 123" required>
+      </div>
+
+      <div class="form-group">
+        <label>Horario Preferido:</label>
+        <select id="horario" required>
+          <option value="">Seleccione un horario</option>
+          <option value="Mañana (9:00 am - 12:00 pm)">Mañana (9:00 am - 12:00 pm)</option>
+          <option value="Tarde (2:00 pm - 6:00 pm)">Tarde (2:00 pm - 6:00 pm)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-delivery">Confirmar Pedido</button>
+    </form>
+
+    <div id="mensaje-exito" class="mensaje-confirmacion">
+      ✔ ¡Pedido registrado con éxito!
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 MegaMercado Perú</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

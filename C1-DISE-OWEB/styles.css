@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: linear-gradient(135deg, #ffda00 0%, #ffb703 100%);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo h1 { font-size: 24px; color: #000; }
+.logo span { color: #d90429; }
+
+.buscador input {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.buscador button {
+  padding: 6px 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.nav a:hover, .nav a.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+.hero h2 { color: #d90429; margin-bottom: 10px; }
+
+.btn-oferta {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #d90429;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.seccion {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.filtro-categoria {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(217, 4, 41, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@keyframes efectoPulso {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.badge-pulse {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #d90429;
+  color: white;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 3px;
+  animation: efectoPulso 1.5s infinite;
+}
+
+.precio {
+  font-size: 18px;
+  color: #d90429;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.btn-cart {
+  background-color: #ffda00;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cart-icon { transition: transform 0.3s ease; }
+
+.btn-cart:hover .cart-icon {
+  transform: translateX(4px) rotate(-10deg);
+}
+
+.form-delivery {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; }
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-delivery {
+  width: 100%;
+  background-color: #d90429;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.btn-delivery:hover { background-color: #ef233c; }
+
+@keyframes deslizarAbajo {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mensaje-confirmacion {
+  display: none;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.mensaje-confirmacion.animar {
+  display: block;
+  animation: deslizarAbajo 0.5s ease-out;
+}
+
+@keyframes aparecerProgresivo {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-scroll { animation: aparecerProgresivo 0.8s ease-out; }
+
+.lista-sedes { list-style: none; text-align: center; line-height: 2; }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: white;
+  margin-top: 30px;
+}
